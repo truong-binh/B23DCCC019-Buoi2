@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import "./AddProduct.css";
 
 const EditProduct = ({ products, onUpdate }) => {
@@ -56,9 +56,14 @@ const EditProduct = ({ products, onUpdate }) => {
                         required
                     />
                 </div>
-                <button className="submit-button" type="submit">
-                    Cập nhật sản phẩm
-                </button>
+                <div className="button-group">
+                    <button className="submit-button" type="submit">
+                        Cập nhật sản phẩm
+                    </button>
+                    <Link to="/" className="back-button">
+                        Quay lại
+                    </Link>
+                </div>
             </form>
         </div>
     );
